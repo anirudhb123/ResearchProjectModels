@@ -225,6 +225,13 @@ modelCallbacks = [EarlyStopping(patience=25),
                     ModelCheckpoint(filepath="/abvol/Pred_zvv.hdf5", save_weights_only=True,
                                 save_best_only=True)]
 
+# normalization
+trainingData = trainingData / np.sum(trainingData)
+validationData = validationData / np.sum(validationData)
+testData = testData / np.sum(testData)
+
+train_weights = train_weights / np.sum(trainingData)
+val_weights = val_weights / np.sum(validationData)
 
 history = model.fit(x=trainingData, y=trainingLabels,epochs=numberOfEpochs, batch_size=batchSize,
                 callbacks=modelCallbacks,
