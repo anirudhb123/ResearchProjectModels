@@ -224,6 +224,13 @@ def replace_values(arr,threshold):
 train_weights = replace_values(np.concatenate((nom_met[0:nomTrainingDataLength], ztautau_met[0:ztautauTrainingDataLength]), axis=0), 100)
 val_weights = replace_values(np.concatenate((nom_met[nomTrainingDataLength:nomValidationDataLength], ztautau_met[ztautauTrainingDataLength:ztautauValidationDataLength]), axis=0), 100)
 
+# normalization
+trainingData = trainingData / np.sum(trainingData)
+validationData = validationData / np.sum(validationData)
+testData = testData / np.sum(testData)
+
+train_weights = train_weights / np.sum(trainingData)
+val_weights = val_weights / np.sum(validationData)
 
 history = model.fit(x=trainingData, y=trainingLabels,epochs=numberOfEpochs, batch_size=batchSize,
                 callbacks=modelCallbacks,
