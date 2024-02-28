@@ -6,11 +6,9 @@ This repository contains implementations of supervised and unsupervised anomaly 
 Proton-proton collision data obtained from experiments at the LHC are vast and complex. Among this data, anomalies or rare events are of particular interest as they might unveil new physics phenomena. Anomaly detection techniques are crucial for sifting through this data to uncover events that deviate from the expected behavior.
 
 ## Models
-The repository includes two categories of anomaly detection models:
+The repository includes both supervised and unsupervised anomaly detection models:
 
 ### Supervised Models:
-1. **Support Vector Machines (SVM)**: A supervised learning algorithm that separates normal data from anomalies using a hyperplane in feature space.
-2. **Random Forest**: An ensemble learning method that constructs multiple decision trees to identify anomalies based on features derived from the data.
 
 ### Unsupervised Models:
 1. **Autoencoders**: Deep learning models trained to reconstruct normal data, identifying anomalies as deviations from the reconstructed data.
