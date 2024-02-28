@@ -1,6 +1,6 @@
 # Anomaly Detection in Proton-Proton Collision Data from the LHC
 
-This repository contains implementations of supervised and unsupervised anomaly detection models tailored for analyzing proton-proton collision data collected from the Large Hadron Collider (LHC). These models are essential for identifying rare and potentially significant events that may indicate phenomena beyond the Standard Model of particle physics.
+This repository contains implementations of supervised and unsupervised anomaly detection models tailored for analyzing proton-proton collision data collected from the Large Hadron Collider (LHC). 
 
 ## Introduction
 Proton-proton collision data obtained from experiments at the LHC are vast and complex. Among this data, anomalies or rare events are of particular interest as they might unveil new physics phenomena. Anomaly detection techniques are crucial for sifting through this data to uncover events that deviate from the expected behavior.
