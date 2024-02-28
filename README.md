@@ -14,6 +14,8 @@ The repository includes both supervised and unsupervised anomaly detection model
 1. **Autoencoders**: Deep learning models trained to reconstruct normal data, identifying anomalies as deviations from the reconstructed data.
 2. **Variational Autoencoders (VAEs)**: A variant of autoencoders that learn the underlying probability distribution of the data, enabling the detection of outliers based on the reconstruction error and learned distribution.
 
+For the unsupervised models, if you would like to use Weights and Biases to track your runs, please use the models with the wandb_ prefix.
+
 ## Usage
 Each model is implemented in a separate Python script within the `models` directory. Follow the instructions below to utilize these models:
 
