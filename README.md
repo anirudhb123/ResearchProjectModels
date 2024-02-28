@@ -30,7 +30,7 @@ Each model is implemented in a separate Python script within the `models` direct
 1. Clone this repository to your local machine:
 
     ```bash
-    git clone https://github.com/your-username/proton-collision-anomaly-detection.git
+    git clone https://github.com/your-username/ResearchProjectModels.git
     ```
 
 2. Navigate to the repository directory:
@@ -47,8 +47,8 @@ Each model is implemented in a separate Python script within the `models` direct
 
 4. Prepare your proton-proton collision data in a suitable format. 
 
-5. Choose the model you want to use and execute its corresponding Python script. For example, to run a variational autoencoder model
+5. Choose the model you want to use and execute its corresponding Python script. For example, to run a variational autoencoder model that uses mse as the loss metric, run
 
     ```bash
-    python ResearchProjectModels/'Variational Autoencoder Models'/wandb_vae_mse.py
+    python ResearchProjectModels/'Variational Autoencoder Models'/vae_mse.py
     ```
