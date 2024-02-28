@@ -27,7 +27,7 @@ from scipy.stats import wasserstein_distance
 
 
 from wandb.keras import WandbCallback
-wandb.init(project="Models", config={"key": "value"})
+wandb.init(project="[INSERT YOUR PROJECT NAME HERE]", config={"key": "value"})
 
 
 # Opens files and reads data
@@ -260,37 +260,11 @@ model.compile(optimizer='adam', loss=custom_loss)
     
 #print('Calculating')
 
-##class CustomWandbCallback(WandbCallback):
-##    def __init__(self, *args, **kwargs):
-##        super().__init__(*args, **kwargs)
-##    
-##    def on_epoch_end(self, epoch, logs=None):
-##        # Call the on_epoch_end method of the base callbacks
-##        super(CustomWandbCallback, self).on_epoch_end(epoch, logs)
-##        
-##        # Log additional custom metrics to wandb
-##        wandb.log({"custom_metric": logs["custom_metric"]})
-##
-### Initialize your custom WandbCallback
-##custom_wandb_callback = CustomWandbCallback()
-##    
-##model_callbacks = [
-##    EarlyStopping(min_delta=0.001, patience=25),
-##    ModelCheckpoint(filepath="/abvol/Pred1.hdf5", save_weights_only=True, save_best_only=True),
-##    custom_wandb_callback
-##]
-
-#with experiment.train():
 
 history = model.fit(x=nomClusterTrainingData, y=nomClusterTrainingLabels,epochs=numberOfEpochs, batch_size=batchSize,
                 callbacks=[WandbCallback()],
                 validation_data=(nomClusterValidationData, nomClusterValidationLabels))
     
-#print("Loading weights")
-    
-# model.load_weights("/abvol/Pred.hdf5")
-    
-#model.save("/abvol/cluster_models/"+modelName+",model")
 
 wandb.finish()
 
