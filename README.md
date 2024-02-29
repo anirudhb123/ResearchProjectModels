@@ -45,7 +45,7 @@ Each model is implemented in a separate Python script within the `models` direct
     pip install -r requirements.txt
     ```
 
-4. Prepare your proton-proton collision data in a suitable format. 
+4. Prepare your proton-proton collision data in a suitable format. The data expects all files to be in a directory ``abvol``. The data can be downloaded from the following directory ``/eos/home-d/drankin/ADO/GepOutput{,_EM}/``.
 
 5. Choose the model you want to use and execute its corresponding Python script. For example, to run a variational autoencoder model that uses mse as the loss metric, run
 
